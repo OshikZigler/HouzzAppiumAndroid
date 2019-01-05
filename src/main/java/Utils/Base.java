@@ -42,7 +42,7 @@ public class Base {
         return value;
     }
 
-    //Setting Android driver with desired capabilities
+    //Setting Android driver with desired capabilities from config file
 
     public static AndroidDriver setDriver() throws MalformedURLException {
 
