@@ -1,0 +1,22 @@
+
+# appium service ip and port
+run.ip = 127.0.0.1
+run.port = 4725
+
+# platform version
+platform.android.version = 7.0
+
+# device name
+emulator.android.name = Android Emulator
+device.android.name = 5210aaa2f48944bd
+
+# app path
+app.android.path = app/HouzzApp_26046.apk
+
+#app activity
+app.activity = SplashScreenActivity
+
+#app package
+app.package = com.houzz.app
+
+
