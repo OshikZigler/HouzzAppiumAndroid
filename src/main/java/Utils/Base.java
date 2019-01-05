@@ -20,6 +20,7 @@ public class Base {
     public static OnBoardingScreen onBoardingScreen;
     public static CommonMethods commonMethods = new CommonMethods();
 
+
     public static String readProperty(String property) {
 
         Properties properties;
