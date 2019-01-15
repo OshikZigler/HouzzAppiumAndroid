@@ -1,10 +1,11 @@
 
 # appium service ip and port
 run.ip = 127.0.0.1
-run.port = 4725
+run.port = 4723
 
 # platform version
-platform.android.version = 7.0
+device.android.version = 8.0.0
+emulator.android.version = 7.0
 
 # device name
 emulator.android.name = Android Emulator

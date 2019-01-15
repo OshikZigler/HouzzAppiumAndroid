@@ -28,7 +28,7 @@ public class Base {
 
         try {
             properties = new Properties();
-            properties.load(new FileInputStream(new File("config.properties")));
+            properties.load(new FileInputStream(new File("/Users/oshikzigler/Automation/HouzzAppiumAndroid/config")));
 
             value = properties.getProperty(property);
 
@@ -50,14 +50,14 @@ public class Base {
         String completeURL = "http://" + Base.readProperty("run.ip") + ":" + Base.readProperty("run.port") + "/wd/hub";
 
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, Base.readProperty("platform.android.version"));
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, Base.readProperty("device.android.version"));
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Base.readProperty("device.android.name"));
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
         capabilities.setCapability(MobileCapabilityType.APP, new File(Base.readProperty("app.android.path")).getAbsolutePath());
         capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, Base.readProperty("app.package"));
         capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, Base.readProperty("app.activity"));
 
-        driver = new AndroidDriver(new URL(completeURL), capabilities);
+          driver = new AndroidDriver(new URL(completeURL), capabilities);
 
         return driver;
     }
